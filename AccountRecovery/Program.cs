@@ -125,7 +125,7 @@ namespace AccountRecovery
             logi[(int)Logi.Pay].AddDetector(new Detektor(@"\[(\d{4})\/(\d{2})\/(\d{2}) - (\d{2}):(\d{2}):(\d{2})\] (\w*_\w*) kupil dom \(id (\d*)\) od (\w*_\w*) za (\d*)\$.", typeof(SprzedazDomu)));
             
             //---- [ Sejfy ] ----
-            /*logi[(int)Logi.Pay].AddDetector(new Detektor(@"\[(\d{4})\/(\d{2})\/(\d{2}) - (\d{2}):(\d{2}):(\d{2})\] Gracz (\w*_\w*) wlozyl (\d*)\$ do sejfu. W sejfie przed: (?:\d*), po: (?:\d*)", typeof(SejfHajsDo)));
+            logi[(int)Logi.Pay].AddDetector(new Detektor(@"\[(\d{4})\/(\d{2})\/(\d{2}) - (\d{2}):(\d{2}):(\d{2})\] Gracz (\w*_\w*) wlozyl (\d*)\$ do sejfu. W sejfie przed: (?:\d*), po: (?:\d*)", typeof(SejfHajsDo)));
             logi[(int)Logi.Pay].AddDetector(new Detektor(@"\[(\d{4})\/(\d{2})\/(\d{2}) - (\d{2}):(\d{2}):(\d{2})\] Gracz (\w*_\w*) wlozyl (\d*) matsow do sejfu", typeof(SejfMatsDo)));
             logi[(int)Logi.Pay].AddDetector(new Detektor(@"\[(\d{4})\/(\d{2})\/(\d{2}) - (\d{2}):(\d{2}):(\d{2})\] Gracz (\w*_\w*) wlozyl (\d*) dragow do sejfu", typeof(SejfDragiDo)));
             logi[(int)Logi.Pay].AddDetector(new Detektor(@"\[(\d{4})\/(\d{2})\/(\d{2}) - (\d{2}):(\d{2}):(\d{2})\] Gracz (\w*_\w*) wyjal (\d*)\$ z sejfu", typeof(SejfHajsZ)));
@@ -133,7 +133,7 @@ namespace AccountRecovery
             logi[(int)Logi.Pay].AddDetector(new Detektor(@"\[(\d{4})\/(\d{2})\/(\d{2}) - (\d{2}):(\d{2}):(\d{2})\] Gracz (\w*_\w*) wyjal (\d*) dragow z sejfu", typeof(SejfDragiDo)));
             logi[(int)Logi.Pay].AddDetector(new Detektor(@"\[(\d{4})\/(\d{2})\/(\d{2}) - (\d{2}):(\d{2}):(\d{2})\] .* (\w*_\w*) wyplacil (\d*)\$ z sejfu frakcji nr (\d*). Jest w nim teraz (\d*)\$", typeof(SejfFrakcjiZ)));
             logi[(int)Logi.Pay].AddDetector(new Detektor(@"\[(\d{4})\/(\d{2})\/(\d{2}) - (\d{2}):(\d{2}):(\d{2})\] .* (\w*_\w*) wplacil (\d*)\$ do sejfu frakcji nr (\d*). Jest w nim teraz (\d*)\$", typeof(SejfFrakcjiDo)));
-            */
+            
             //---- [ Nominacje ] ----
             logi[(int)Logi.Setstat].AddDetector(new Detektor(@"\[(\d{4})\/(\d{2})\/(\d{2}) - (\d{2}):(\d{2}):(\d{2})\] AdmCmd: (?:\w*_\w*) mianowa. (\w*_\w*) na (\d*) level admina.", typeof(Admin)));
             logi[(int)Logi.Ck].AddDetector(new Detektor(@"\[(\d{4})\/(\d{2})\/(\d{2}) - (\d{2}):(\d{2}):(\d{2})\] AdmCmd: (?:\w*_\w*) mianowal (\w*_\w*) na (\d*) level poladmina.", typeof(PolAdmin)));
