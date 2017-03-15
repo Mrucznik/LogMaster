@@ -112,8 +112,9 @@ namespace AccountRecovery
         {
             int model = KonwertujMarkeNaModel(Marka);
             Vector3F pos = LosujPozycje();
-            return $"INSERT INTO `{Global.CarTable}` (`model`, `x`, `y`, `z`, `angle`, `color1`, `color2`) " + 
-                $"VALUES ('{model}', '{pos.X:F}', '{pos.Y:F}', '{pos.Z:F}', '0.0', '-1', '-1');";
+            /*return $"INSERT INTO `{Global.CarTable}` (`model`, `x`, `y`, `z`, `angle`, `color1`, `color2`) " + 
+                $"VALUES ('{model}', '{pos.X:F}', '{pos.Y:F}', '{pos.Z:F}', '0.0', '-1', '-1');";*/
+            return "";
         }
     }
 
@@ -145,9 +146,9 @@ namespace AccountRecovery
         {
             Gracz gKupujacy = Gracze.GetPlayerOrGenerateIfNotExists(Kupujacy);
             Gracz gSprzedajacy = Gracze.GetPlayerOrGenerateIfNotExists(Sprzedajacy);
-            return $"UPDATE `{Global.AccountTable}` SET `Money`=`Money`-'{Hajs}' WHERE `UID`='{gKupujacy.Uid}';\n" +
-                   $"UPDATE `{Global.AccountTable}` SET `Money`=`Money`+'{Hajs}' WHERE `UID`='{gSprzedajacy.Uid}';\n" +
-                   $"UPDATE `{Global.CarTable}` SET `owner`='{gKupujacy.Uid}' WHERE `UID`='{CarUID}';";
+            return $"UPDATE `{Global.AccountTable}` SET `Money`=`Money`+'{Hajs}' WHERE `UID`='{gKupujacy.Uid}';\n" +
+                   $"UPDATE `{Global.AccountTable}` SET `Money`=`Money`-'{Hajs}' WHERE `UID`='{gSprzedajacy.Uid}';\n" +
+                   $"UPDATE `{Global.CarTable}` SET `owner`='1' WHERE `UID`='{CarUID}';";
         }
     }
 

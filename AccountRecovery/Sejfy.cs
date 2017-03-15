@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace AccountRecovery
 {
-    /*abstract class Sejf : Akcja
+    abstract class Sejf : Akcja
     {
         protected string Nick;
         protected int Ilosc;
@@ -199,5 +199,5 @@ namespace AccountRecovery
         {
             throw new NotImplementedException();
         }
-    }*/
+    }
 }

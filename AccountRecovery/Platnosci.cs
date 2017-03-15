@@ -146,8 +146,8 @@ namespace AccountRecovery
         {
             Gracz g = Gracze.GetPlayerOrGenerateIfNotExists(Dajacy);
             Gracz g2 = Gracze.GetPlayerOrGenerateIfNotExists(Odbierajacy);
-            return $"UPDATE `{Global.AccountTable}` SET `Money`=`Money`-'{Hajs}' WHERE `UID`='{g.Uid}';\n" +
-                $"UPDATE `{Global.AccountTable}` SET `Money`=`Money`+'{Hajs}' WHERE `UID`='{g2.Uid}';";
+            return $"UPDATE `{Global.AccountTable}` SET `Money`=`Money`+'{Hajs}' WHERE `UID`='{g.Uid}';\n" +
+                $"UPDATE `{Global.AccountTable}` SET `Money`=`Money`-'{Hajs}' WHERE `UID`='{g2.Uid}';";
         }
     }
 
@@ -175,8 +175,8 @@ namespace AccountRecovery
         {
             Gracz g = Gracze.GetPlayerOrGenerateIfNotExists(Dajacy);
             Gracz g2 = Gracze.GetPlayerOrGenerateIfNotExists(Odbierajacy);
-            return $"UPDATE `{Global.AccountTable}` SET `Bank`=`Bank`-'{Hajs}' WHERE `UID`='{g.Uid}';\n" +
-                $"UPDATE `{Global.AccountTable}` SET `Bank`=`Bank`+'{Hajs}' WHERE `UID`='{g2.Uid}';";
+            return $"UPDATE `{Global.AccountTable}` SET `Bank`=`Bank`+'{Hajs}' WHERE `UID`='{g.Uid}';\n" +
+                $"UPDATE `{Global.AccountTable}` SET `Bank`=`Bank`-'{Hajs}' WHERE `UID`='{g2.Uid}';";
         }
     }
 

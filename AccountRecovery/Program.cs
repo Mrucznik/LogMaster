@@ -12,7 +12,7 @@ namespace AccountRecovery
         public static string AccountTable => "mru_konta";
         public static string BanTable => "mru_bany";
         public static string CarTable => "mru_cars";
-        public static string Patch = @"logi";
+        public static string Patch = @"input";
         public static int ProcessedLogLines;
         public static int GeneratedQueries;
 
@@ -91,9 +91,6 @@ namespace AccountRecovery
             logi[4] = new Logs(Global.Patch + @"\ban.log", "BanLog");
             logi[5] = new Logs(Global.Patch + @"\warn.log", "WarnLog");
             logi[6] = new Logs(Global.Patch + @"\setstats.log", "SetstatsLog");
-
-            if(Gracze.IsPlayerExists("Rayan_Charles"))
-                Console.WriteLine("LOL");
 
             Console.WriteLine("Dodaję detektory...");
             //---- [ NickLog ] ----
